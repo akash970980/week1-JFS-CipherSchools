@@ -20,6 +20,10 @@ class GPay{
 	private float txnCharge=0.05f;
 	
 	public void setTxnCharge(float newCharge) {
+		if(newCharge<=0) {
+			System.out.println("Invalid TxnCharge");
+			return;
+		}
 		txnCharge=newCharge;
 	}
 	
